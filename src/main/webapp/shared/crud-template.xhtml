@@ -44,6 +44,9 @@
 	              <li><a href="#{request.contextPath}/category/form-add.xhtml"><span class="glyphicon glyphicon-plus-sign"></span> Add category</a></li>	              
 	              <li><a href="#{request.contextPath}/category/list.xhtml"><span class="glyphicon glyphicon-menu-hamburger"></span> List category</a></li>
 				  <li role="separator" class="divider"></li>
+				  <h:form>
+			        <h:commandButton value="logout" action="#{logout.submit}" />
+    		      </h:form>
             </ul>
           </li>
         </ul>

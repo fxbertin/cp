@@ -7,7 +7,7 @@
 	<ui:define name="body">
 	  <div>
 	    <div class ="container min-container">
-	      <h2 class="basic-title">List category</h2>
+	      <h2 class="basic-title">List product</h2>
 	        <div class="well">
 	          <table class="table table-condensed table-bordered table-striped table-hover">
 	          
@@ -16,20 +16,22 @@
 		                  	<td>id</td>
 			                  	<td>name</td>
 			                  	<td>description</td>
+			                  	<td>price</td>
 							<td>actions</td>
 		                  </tr>
 	                  </thead>
 	                  <tbody>
-	                  <ui:repeat value="#{categoryController.categoryList}" var="object">         		
+	                  <ui:repeat value="#{productController.productList}" var="object">         		
 		                  <tr>
 							<td>
-							 <a href="#{request.contextPath}/category/form-update.xhtml?id=#{object.id}">#{object.id}</a>
+							 <a href="#{request.contextPath}/product/form-update.xhtml?id=#{object.id}">#{object.id}</a>
 							</td>						
 			                  	<td>#{object.name}</td>
 			                  	<td>#{object.description}</td>
+			                  	<td>#{object.price}</td>
 							<td>
 								<h:form>
-									<h:commandLink action="#{categoryController.remove(object.id)}">Remove</h:commandLink>
+									<h:commandLink action="#{productController.remove(object.id)}">Remove</h:commandLink>
 								</h:form>
 							</td>
 						  </tr>
@@ -37,7 +39,7 @@
 	                  </tbody>
 	          </table>
 			  
-	          <a href="#{request.contextPath}/category/form-add.xhtml" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add New</a>
+	          <a href="#{request.contextPath}/app/product/form-add.xhtml" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add New</a>
 	        </div>
 	    </div>
 	  </div>
